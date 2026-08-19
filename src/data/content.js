@@ -92,6 +92,9 @@ export const PROCESS = [
   { n: '05', title: 'Scale',     desc: 'Optimize, measure and grow.' },
 ]
 
+// Roster order matches the listing in the brief (Aug 2026 update).
+// Members without `image` get the placeholder ring + "?" glyph until
+// their photo is provided.
 export const TEAM = [
   {
     name: 'Mr Aniq Kamran',
@@ -104,15 +107,34 @@ export const TEAM = [
     image: '/assets/team/director.jpg',
   },
   {
-    name: '[Name]',
-    role: 'Sales Team',
-    image: '/assets/team/demo.svg',
+    name: 'Hur Ali',
+    role: 'Lead Videographer',
+    image: '/assets/team/lead-videographer.jpg',
   },
   {
-    name: '[Name]',
-    role: '[Role / Title]',
+    name: 'Sammar Aziz',
+    role: 'Content Writer',
     image: null,
-    empty: true,
+  },
+  {
+    name: 'Gufran Khan',
+    role: 'Sales Head',
+    image: null,
+  },
+  {
+    name: 'Sammar Aziz',
+    role: 'SEO Specialist',
+    image: null,
+  },
+  {
+    name: 'Murtaza Adil',
+    role: 'Motion Graphic Designer',
+    image: null,
+  },
+  {
+    name: 'Ahmed',
+    role: 'Analytics and Strategy',
+    image: null,
   },
 ]
 

@@ -1,7 +1,0 @@
-name = "the-archons"
-compatibility_date = "2026-01-01"
-pages_build_output_dir = "dist"
-
-# Cloudflare Pages reads this automatically when the project is connected.
-# Vite outputs static files to ./dist, which matches `pages_build_output_dir`.
-# Build command (set in Cloudflare dashboard): `npm run build`

@@ -1,0 +1,148 @@
+.testi {
+  position: relative;
+  background:
+    linear-gradient(180deg, var(--color-bg) 0%, var(--color-bg-2) 100%);
+  border-top: 1px solid var(--color-border);
+  border-bottom: 1px solid var(--color-border);
+  overflow: hidden;
+}
+
+.testi::before {
+  content: '';
+  position: absolute;
+  top: 20%;
+  left: -10%;
+  width: 50vw;
+  height: 50vw;
+  background: radial-gradient(circle, var(--color-glow-soft), transparent 70%);
+  filter: blur(80px);
+  pointer-events: none;
+}
+
+.testi__head {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  max-width: 720px;
+  margin-bottom: 3rem;
+  position: relative;
+  z-index: 1;
+}
+
+.testi__title {
+  font-size: var(--fs-h2);
+  font-weight: 800;
+  line-height: 1.1;
+  letter-spacing: -0.025em;
+  max-width: 22ch;
+}
+
+.testi__viewport {
+  position: relative;
+  min-height: 320px;
+  display: grid;
+  place-items: center;
+  z-index: 1;
+}
+
+.testi__card {
+  grid-area: 1 / 1;
+  width: min(100%, 900px);
+  padding: 3rem;
+  background: var(--gradient-card);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-lg);
+  text-align: center;
+  opacity: 0;
+  transform: translateY(20px) scale(0.98);
+  transition: opacity var(--duration-slow) var(--ease-out),
+              transform var(--duration-slow) var(--ease-out);
+  position: relative;
+  overflow: hidden;
+}
+
+.testi__card.is-active {
+  opacity: 1;
+  transform: translateY(0) scale(1);
+}
+
+.testi__quote-mark {
+  position: absolute;
+  top: 1rem;
+  left: 2rem;
+  font-family: var(--font-display);
+  font-size: 8rem;
+  font-weight: 700;
+  line-height: 1;
+  color: var(--color-accent);
+  opacity: 0.18;
+  pointer-events: none;
+}
+
+.testi__quote {
+  font-family: var(--font-display);
+  font-size: clamp(1.15rem, 2vw, 1.75rem);
+  font-weight: 500;
+  line-height: 1.4;
+  color: var(--color-text);
+  letter-spacing: -0.01em;
+  max-width: 60ch;
+  margin: 0 auto;
+  position: relative;
+  z-index: 1;
+}
+
+.testi__cap {
+  display: flex;
+  flex-direction: column;
+  gap: 0.25rem;
+  margin-top: 2rem;
+  position: relative;
+  z-index: 1;
+}
+
+.testi__cap strong {
+  font-family: var(--font-display);
+  font-size: 1rem;
+  font-weight: 600;
+  color: var(--color-text);
+}
+
+.testi__cap span {
+  font-size: 0.85rem;
+  color: var(--color-muted);
+}
+
+.testi__dots {
+  display: flex;
+  justify-content: center;
+  gap: 0.5rem;
+  margin-top: 2rem;
+  position: relative;
+  z-index: 1;
+}
+
+.testi__dot {
+  width: 28px;
+  height: 2px;
+  background: var(--color-border);
+  border-radius: 2px;
+  transition: background var(--duration-base) var(--ease-out),
+              width var(--duration-base) var(--ease-out);
+  cursor: none;
+}
+
+.testi__dot.is-active {
+  background: var(--color-accent);
+  width: 48px;
+  box-shadow: 0 0 8px var(--color-glow);
+}
+
+@media (pointer: coarse) {
+  .testi__dot { cursor: pointer; }
+}
+
+@media (max-width: 900px) {
+  .testi__card { padding: 2rem 1.25rem; }
+  .testi__quote-mark { font-size: 5rem; left: 1rem; }
+}

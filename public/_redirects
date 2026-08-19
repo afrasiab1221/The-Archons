@@ -1,0 +1,5 @@
+# Cloudflare Pages — SPA fallback.
+# Any unknown route (e.g. /blog/post-title on direct load) falls through to
+# index.html so React Router can take over on the client.
+# This file is automatically copied from public/ to dist/ during `vite build`.
+/*    /index.html   200

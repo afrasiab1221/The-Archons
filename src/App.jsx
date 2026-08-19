@@ -3,6 +3,7 @@ import { Routes, Route, useLocation } from 'react-router-dom'
 import gsap from 'gsap'
 import { ScrollTrigger } from 'gsap/ScrollTrigger'
 import Loader from './components/Loader'
+import Cursor from './components/Cursor'
 import Nav from './components/Nav'
 import Footer from './components/Footer'
 import Home from './pages/Home'
@@ -47,6 +48,7 @@ export default function App() {
   return (
     <>
       {!loaded && <Loader onDone={() => setLoaded(true)} />}
+      <Cursor />
       <Nav />
       <Routes>
         <Route path="/" element={<Home />} />

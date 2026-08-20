@@ -28,26 +28,31 @@
 .nav__logo {
   display: inline-flex;
   align-items: center;
-  /* Larger logo: 56px on desktop (was 40px). */
+  justify-content: center;
+  /* Logo container is LOCKED to the visible content's aspect ratio
+     (~1.45:1) so that `object-fit: cover` on the img crops the source
+     PNG's transparent padding on the sides. This is what was making the
+     logo look "pressed inwards" — the visible mark was centered in a
+     wider canvas of empty space. */
   height: 56px;
-  /* Hard cap so the logo never gets compressed horizontally — if the
-     source PNG has internal padding, raising max-width pushes the visible
-     mark larger without distorting the aspect ratio. */
-  max-width: 220px;
-  transition: height var(--duration-base) var(--ease-out);
+  width: 81px;
+  overflow: hidden;
+  flex: 0 0 auto;
+  transition: height var(--duration-base) var(--ease-out),
+              width var(--duration-base) var(--ease-out);
 }
 .nav__logo img {
+  width: 100%;
   height: 100%;
-  width: auto;
-  max-width: 100%;
-  object-fit: contain;
+  object-fit: cover;
+  object-position: center;
   filter: brightness(0) invert(1) drop-shadow(0 0 14px var(--color-glow));
 }
 
 /* Scrolled state — slightly smaller logo so the nav compresses cleanly. */
 .nav.is-scrolled .nav__logo {
   height: 46px;
-  max-width: 180px;
+  width: 67px;
 }
 
 .nav__links {
@@ -165,25 +170,16 @@
 @media (max-width: 900px) {
   .nav__links, .nav__cta { display: none; }
   .nav__toggle { display: inline-flex; }
-  /* Tablet: bigger logo so the visible mark stays crisp, not "pressed in". */
-  .nav__logo { height: 56px; max-width: 200px; }
-  .nav__logo img { drop-shadow none; }
-  /* Match the toggle's height to the logo so they sit visually balanced. */
+  /* Tablet: same 1.45:1 box — visible mark fills the box, no padding. */
+  .nav__logo { height: 56px; width: 81px; }
+  /* Slimmer glow on small screens so the visible mark stays crisp. */
+  .nav__logo img { filter: brightness(0) invert(1) drop-shadow(0 0 8px var(--color-glow)); }
   .nav__toggle { width: 48px; height: 48px; }
 }
 
 @media (max-width: 540px) {
-  /* Phone: keep the logo roomy — the source PNG has internal padding so a
-     small `height` makes the mark look squished. */
-  .nav__logo { height: 48px; max-width: 170px; }
-  .nav.is-scrolled .nav__logo { height: 42px; max-width: 150px; }
+  /* Phone: lock to 48×70 so the visible mark fills the box cleanly. */
+  .nav__logo { height: 48px; width: 70px; }
+  .nav.is-scrolled .nav__logo { height: 42px; width: 61px; }
   .nav__toggle { width: 44px; height: 44px; }
-}
-
-/* Reduce the glow halo on small screens — at 14px it competes with the
-   smaller logo and reads as "smushed". */
-@media (max-width: 900px) {
-  .nav__logo img {
-    filter: brightness(0) invert(1) drop-shadow(0 0 8px var(--color-glow));
-  }
 }

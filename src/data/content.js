@@ -117,9 +117,9 @@ export const TEAM = [
     image: '/assets/team/lead-videographer.jpg',
   },
   {
-    name: 'Sammar Aziz',
-    role: 'Content Writer',
-    image: null,
+    name: 'Junaid Sheikh',
+    role: 'Photography and Creative Head',
+    image: '/assets/team/photography-creative-head.jpg?v=2',
   },
   {
     name: 'Gufran Khan',

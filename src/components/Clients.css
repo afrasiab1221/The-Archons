@@ -61,10 +61,10 @@
 .clients__marquee-track {
   display: flex;
   align-items: center;
-  gap: 5.5rem;
+  gap: 7rem;
   width: max-content;
-  /* Faster scroll: 22s for the full -50% translation (was 40s). */
-  animation: marquee 22s linear infinite;
+  /* Faster scroll: 14s for the full -50% translation. */
+  animation: marquee 14s linear infinite;
 }
 
 .clients__marquee:hover .clients__marquee-track {
@@ -77,30 +77,28 @@
 
 .clients__logo {
   flex: 0 0 auto;
-  /* Larger logo tile: 96px tall (was 64px). */
-  height: 96px;
+  /* Larger logo tile: 128px tall (was 96px). */
+  height: 128px;
   display: grid;
   place-items: center;
-  filter: grayscale(1) brightness(1.05);
-  opacity: 0.7;
-  transition: filter var(--duration-base) var(--ease-out),
-              opacity var(--duration-base) var(--ease-out),
+  /* Logos render in full color now (no grayscale filter). */
+  opacity: 0.92;
+  transition: opacity var(--duration-base) var(--ease-out),
               transform var(--duration-base) var(--ease-out);
 }
 
 .clients__logo img {
   display: block;
   max-height: 100%;
-  max-width: 220px;
+  max-width: 280px;
   width: auto;
   height: auto;
   object-fit: contain;
 }
 
 .clients__logo:hover {
-  filter: grayscale(0) brightness(1);
   opacity: 1;
-  transform: translateY(-2px);
+  transform: translateY(-3px);
 }
 
 @keyframes marquee {
@@ -228,9 +226,9 @@
 
 @media (max-width: 900px) {
   .clients__featured { grid-template-columns: 1fr; }
-  .clients__marquee-track { gap: 4rem; }
-  .clients__logo { height: 64px; }
-  .clients__logo img { max-width: 160px; }
+  .clients__marquee-track { gap: 4.5rem; }
+  .clients__logo { height: 88px; }
+  .clients__logo img { max-width: 200px; }
 }
 
 @media (max-width: 540px) {

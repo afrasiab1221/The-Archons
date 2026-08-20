@@ -95,16 +95,21 @@ export const PROCESS = [
 // Roster order matches the listing in the brief (Aug 2026 update).
 // Members without `image` get the placeholder ring + "?" glyph until
 // their photo is provided.
+//
+// The `?v=2` cache-buster on CEO and Director is a deliberate workaround
+// for the long-lived `Cache-Control: immutable` header we set in `_headers`.
+// When you swap a photo at the same URL, bump the version (e.g. ?v=3)
+// so browsers treat the new image as a fresh URL and refetch.
 export const TEAM = [
   {
     name: 'Mr Aniq Kamran',
     role: 'Chief Executive Officer',
-    image: '/assets/team/ceo.jpg',
+    image: '/assets/team/ceo.jpg?v=2',
   },
   {
     name: 'Mr Afra Siab Khan',
     role: 'Director of Innovation and Technology',
-    image: '/assets/team/director.jpg',
+    image: '/assets/team/director.jpg?v=2',
   },
   {
     name: 'Hur Ali',

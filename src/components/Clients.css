@@ -61,9 +61,10 @@
 .clients__marquee-track {
   display: flex;
   align-items: center;
-  gap: 4.5rem;
+  gap: 5.5rem;
   width: max-content;
-  animation: marquee 40s linear infinite;
+  /* Faster scroll: 22s for the full -50% translation (was 40s). */
+  animation: marquee 22s linear infinite;
 }
 
 .clients__marquee:hover .clients__marquee-track {
@@ -76,7 +77,8 @@
 
 .clients__logo {
   flex: 0 0 auto;
-  height: 64px;
+  /* Larger logo tile: 96px tall (was 64px). */
+  height: 96px;
   display: grid;
   place-items: center;
   filter: grayscale(1) brightness(1.05);
@@ -89,7 +91,7 @@
 .clients__logo img {
   display: block;
   max-height: 100%;
-  max-width: 160px;
+  max-width: 220px;
   width: auto;
   height: auto;
   object-fit: contain;
@@ -226,8 +228,9 @@
 
 @media (max-width: 900px) {
   .clients__featured { grid-template-columns: 1fr; }
-  .clients__marquee-track { gap: 3rem; }
-  .clients__logo { height: 48px; }
+  .clients__marquee-track { gap: 4rem; }
+  .clients__logo { height: 64px; }
+  .clients__logo img { max-width: 160px; }
 }
 
 @media (max-width: 540px) {

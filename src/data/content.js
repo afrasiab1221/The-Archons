@@ -127,9 +127,9 @@ export const TEAM = [
     image: null,
   },
   {
-    name: 'Junaid Sheikh',
+    name: 'Sammaryar Aziz',
     role: 'SEO Specialist',
-    image: '/assets/team/photography-creative-head.jpg?v=3',
+    image: '/assets/team/seo-specialist.jpg?v=2',
   },
   {
     name: 'Murtaza Adil',

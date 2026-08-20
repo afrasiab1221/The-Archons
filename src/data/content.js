@@ -124,7 +124,7 @@ export const TEAM = [
   {
     name: 'Gufran Khan',
     role: 'Sales Head',
-    image: null,
+    image: '/assets/team/gufran-khan.jpg?v=2',
   },
   {
     name: 'Sammaryar Aziz',
@@ -137,9 +137,9 @@ export const TEAM = [
     image: null,
   },
   {
-    name: 'Ahmed',
-    role: 'Analytics and Strategy',
-    image: null,
+    name: 'Muhammad Ali',
+    role: 'Meta & Google Ads Manager',
+    image: '/assets/team/muhammad-ali.jpg?v=2',
   },
 ]
 

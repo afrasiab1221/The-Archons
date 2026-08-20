@@ -2,7 +2,7 @@
   position: fixed;
   inset: 0 0 auto 0;
   z-index: 100;
-  padding-block: 1.25rem;
+  padding-block: 1rem;
   transition: background var(--duration-base) var(--ease-out),
               backdrop-filter var(--duration-base) var(--ease-out),
               border-color var(--duration-base) var(--ease-out),
@@ -11,7 +11,7 @@
 }
 
 .nav.is-scrolled {
-  padding-block: 0.75rem;
+  padding-block: 0.6rem;
   background: rgba(5, 8, 11, 0.82);
   backdrop-filter: blur(20px) saturate(140%);
   -webkit-backdrop-filter: blur(20px) saturate(140%);
@@ -28,12 +28,19 @@
 .nav__logo {
   display: inline-flex;
   align-items: center;
-  height: 40px;
+  /* Larger logo: 56px on desktop (was 40px). */
+  height: 56px;
+  transition: height var(--duration-base) var(--ease-out);
 }
 .nav__logo img {
   height: 100%;
   width: auto;
-  filter: brightness(0) invert(1) drop-shadow(0 0 12px var(--color-glow));
+  filter: brightness(0) invert(1) drop-shadow(0 0 14px var(--color-glow));
+}
+
+/* Scrolled state — slightly smaller logo so the nav compresses cleanly. */
+.nav.is-scrolled .nav__logo {
+  height: 46px;
 }
 
 .nav__links {
@@ -71,8 +78,9 @@
 .nav__link.is-active { color: var(--color-text); }
 
 .nav__cta {
-  padding: 0.7rem 1.4rem;
-  font-size: 0.82rem;
+  /* Bumped padding + font-size to match the larger logo visually. */
+  padding: 0.95rem 1.75rem;
+  font-size: 0.88rem;
 }
 
 .nav__toggle {
@@ -150,4 +158,10 @@
 @media (max-width: 900px) {
   .nav__links, .nav__cta { display: none; }
   .nav__toggle { display: inline-flex; }
+  .nav__logo { height: 48px; }
+}
+
+@media (max-width: 540px) {
+  .nav__logo { height: 42px; }
+  .nav.is-scrolled .nav__logo { height: 38px; }
 }

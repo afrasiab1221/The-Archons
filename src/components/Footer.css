@@ -35,7 +35,8 @@
 
 .footer__logo {
   display: inline-flex;
-  height: 42px;
+  /* Larger footer logo: 58px (was 42px). */
+  height: 58px;
   width: auto;
 }
 .footer__logo img {

@@ -175,6 +175,14 @@
   /* Slimmer glow on small screens so the visible mark stays crisp. */
   .nav__logo img { filter: brightness(0) invert(1) drop-shadow(0 0 8px var(--color-glow)); }
   .nav__toggle { width: 48px; height: 48px; }
+  /* Center the toggle on mobile so the navigation is balanced —
+     logo on the left, toggle at the horizontal center. */
+  .nav__inner { position: relative; justify-content: flex-start; }
+  .nav__toggle {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+  }
 }
 
 @media (max-width: 540px) {

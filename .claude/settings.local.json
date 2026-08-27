@@ -34,7 +34,17 @@
       "Bash(cp \"C:/Users/Afra/Downloads/Logos/CGA.jpg\" \"C:/Users/Afra/Desktop/project 1/public/assets/clients/cga.jpg\")",
       "Bash(cp \"C:/Users/Afra/Downloads/Logos/better half.jpeg\" \"C:/Users/Afra/Desktop/project 1/public/assets/clients/better-half.jpg\")",
       "Bash(cp \"C:/Users/Afra/Downloads/Logos/Game Max.jpg\" \"C:/Users/Afra/Desktop/project 1/public/assets/clients/game-max.jpg\")",
-      "Bash(cp \"C:/Users/Afra/Downloads/Logos/beaconhouse-school-system-logo-png_seeklogo-192837.png\" \"C:/Users/Afra/Desktop/project 1/public/assets/clients/beaconhouse.png\")"
+      "Bash(cp \"C:/Users/Afra/Downloads/Logos/beaconhouse-school-system-logo-png_seeklogo-192837.png\" \"C:/Users/Afra/Desktop/project 1/public/assets/clients/beaconhouse.png\")",
+      "Bash(cp \"C:/Users/Afra/Downloads/CEO.jpeg\" \"C:/Users/Afra/Desktop/project 1/public/assets/team/ceo.jpg\")",
+      "Bash(cp \"C:/Users/Afra/Downloads/Director of Innovation and Technology.jpeg\" \"C:/Users/Afra/Desktop/project 1/public/assets/team/director.jpg\")",
+      "Bash(cp \"C:/Users/Afra/Downloads/Head Videographer.jpeg\" \"C:/Users/Afra/Desktop/project 1/public/assets/team/lead-videographer.jpg\")",
+      "Bash(git add *)",
+      "Bash(git commit -m 'Update team: new CEO + Director photos, add 6 new members with placeholder for future photos *)",
+      "Bash(git push *)",
+      "Bash(cp \"C:/Users/Afra/Downloads/WhatsApp Image 2026-08-17 at 2.45.39 PM.jpeg\" \"C:/Users/Afra/Desktop/project 1/public/assets/team/ceo.jpg\")",
+      "Bash(git checkout *)",
+      "Bash(git commit *)",
+      "Bash(xxd)"
     ]
   }
 }

@@ -97,6 +97,18 @@ export default function BlogPost() {
           <ReactMarkdown>{post.body}</ReactMarkdown>
         </div>
 
+        {/* Featured cover image — rendered at the bottom of the body so it
+            doesn't compete with the title block, but only when `cover` is
+            set in frontmatter. */}
+        {post.cover && (
+          <figure className="blog-post__cover">
+            <img src={post.cover} alt={post.title} loading="lazy" />
+            {post.coverCaption && (
+              <figcaption className="muted">{post.coverCaption}</figcaption>
+            )}
+          </figure>
+        )}
+
         <footer className="blog-post__foot">
           <Link
             to="/#contact"

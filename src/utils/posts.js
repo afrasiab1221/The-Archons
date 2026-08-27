@@ -77,6 +77,7 @@ export function getAllPosts() {
       authorRole: frontmatter.authorRole || '',
       tags: Array.isArray(frontmatter.tags) ? frontmatter.tags : [],
       cover: frontmatter.cover || '',
+      coverCaption: frontmatter.coverCaption || frontmatter.cover_caption || '',
       readingTime: frontmatter.readingTime || '',
       body,
       _path: path,

@@ -4,11 +4,8 @@ slug: "instagram-engagement-dropping"
 description: "Instagram engagement drops for real reasons — weak content, inconsistent posting, weak hooks. Here's how to diagnose and fix it."
 date: "2026-08-27"
 author: "The Archons"
-cover: "/assets/blog/instagram-engagement-stats.jpg?v=2"
-coverCaption: "Social media engagement statistics — 2025."
+cover: ""
 ---
-
-![Instagram engagement and social media marketing example](/assets/blog/instagram-engagement-stats.jpg?v=2)
 
 If you have noticed your **Instagram engagement dropping**, you are not alone. Many business accounts see changes in likes, comments, shares, and reach over time. However, this does not always mean your audience has lost interest.
 

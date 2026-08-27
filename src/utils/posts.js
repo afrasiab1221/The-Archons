@@ -70,7 +70,9 @@ export function getAllPosts() {
       slug: frontmatter.slug,
       title: frontmatter.title || frontmatter.slug,
       date: frontmatter.date || '',
-      excerpt: frontmatter.excerpt || '',
+      // Accept either `excerpt` or `description` as the listing summary.
+      // Some posts use `description` (SEO-style) instead of `excerpt`.
+      excerpt: frontmatter.excerpt || frontmatter.description || '',
       author: frontmatter.author || 'The Archons',
       authorRole: frontmatter.authorRole || '',
       tags: Array.isArray(frontmatter.tags) ? frontmatter.tags : [],

@@ -44,7 +44,9 @@
       "Bash(cp \"C:/Users/Afra/Downloads/WhatsApp Image 2026-08-17 at 2.45.39 PM.jpeg\" \"C:/Users/Afra/Desktop/project 1/public/assets/team/ceo.jpg\")",
       "Bash(git checkout *)",
       "Bash(git commit *)",
-      "Bash(xxd)"
+      "Bash(xxd)",
+      "Read(//c/Users/Afra/Downloads/**)",
+      "Bash(cp \"C:/Users/Afra/Downloads/social-media-marketing-statistics-for-2025.jpg\" \"C:/Users/Afra/Desktop/project 1/public/assets/blog/instagram-engagement-stats.jpg\")"
     ]
   }
 }

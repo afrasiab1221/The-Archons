@@ -22,7 +22,7 @@ tags:
   - paid media
 ---
 
-<!-- Add blog body content below this line -->
+
 
 # Google Ads vs Facebook Ads: Which Is Better?
 
